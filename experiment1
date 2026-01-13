@@ -17,19 +17,22 @@ void complexRec(int n) {
        }
        p >>= 1;//divide by 2
    }
-
+//O(log n)
 
    vector<int> small(n);
    for (int i = 0; i < n; i++) { //T.C=O(n)
        small[i] = i * i;
+         ops++;
    }
-
+//T.C=O(n)+O(n)=O(n)
 
    if (n % 3 == 0) {
        reverse(small.begin(), small.end());
+         ops++;
 
    } else {
        reverse(small.begin(), small.end());
+         ops++;
    }
 
 
@@ -41,9 +44,10 @@ int main(){
     int n=8;
     complexRec(n);
     cout<<"Operations "<<ops<<endl;
-    cout<<"DEpth is: "<<depth<<endl;
+    cout<<"Depth is: "<<depth<<endl;
     return 0;
 }
 
-//Recurrence relation= 3T(n/2)+ logn
+//Recurrence relation= 3T(n/2)+ O(logn
+//Using master theorem
 //T.C=O(n^log(base 2)3)
