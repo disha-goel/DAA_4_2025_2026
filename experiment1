@@ -9,10 +9,11 @@ void complexRec(int n) {
    }
    int p = n;
    while (p > 0) { 
-        ops++;
+      ops++;
        vector<int> temp(n);
        for (int i = 0; i < n; i++) {//T.C=O(n)
            temp[i] = i ^ p;
+            ops++;
        }
        p >>= 1;//divide by 2
    }
@@ -45,4 +46,4 @@ int main(){
 }
 
 //Recurrence relation= 3T(n/2)+ logn
-//T.C=O(nlogn)
+//T.C=O(n^log(base 2)3)
