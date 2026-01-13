@@ -45,4 +45,4 @@ int main(){
 }
 
 //Recurrence relation= 3T(n/2)+ logn
-//T.C= loop1 +loop2
+//T.C=O(nlogn)
